@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Detect Operating System using JavaScript</title>
+</head>
+<body style="text-align:center;" id="body">
+    <h1 style="color:green;">
+            Manav Oza || MERN Developer
+        </h1>
+    <p id="MA9"
+       style="font-size: 19px;
+              font-weight: bold;">
+    </p>
+    <button onclick="getOS()">
+        click here
+    </button>
+    <p id="GFG_DOWN"
+       style="color: green;
+              font-size: 24px;
+              font-weight: bold;">
+    </p>
+    <script>
+        HTMLDocument.prototype.e = document.getElementById;
+        var el_up = document.e("MA9");
+        var el_down = document.e("GFG_DOWN");
+        el_up.innerHTML = "Click on the button to get the OS of User's System.";
+        var Name = "Not known";
+        if (navigator.appVersion.indexOf("Win") != -1) Name =
+          "Windows OS";
+        if (navigator.appVersion.indexOf("Mac") != -1) Name =
+          "MacOS";
+        if (navigator.appVersion.indexOf("X11") != -1) Name =
+          "UNIX OS";
+        if (navigator.appVersion.indexOf("Linux") != -1) Name =
+          "Linux OS";
+
+        function getOS() {
+            el_down.innerHTML = Name;
+        }
+    </script>
+</body>
+</html>
